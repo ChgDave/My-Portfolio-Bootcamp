@@ -1,17 +1,21 @@
+/* Define font style for the page */
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Define background color for the page */
 body {
   background-color: rgb(51, 48, 48);
 }
 
+/* Define ul section, flexbox display */
 ul {
   display: flex;
   margin: 25px;
   justify-content: flex-end;
 }
 
+/* Define each li section */
 li {
   display: flex;
   align-items: center;
@@ -20,7 +24,7 @@ li {
   padding: 0 15px;
   color: aliceblue;
 }
-
+/* Define each anchor tag inside the nav section */
 nav a {
   text-decoration: none;
   color: aliceblue;
@@ -29,17 +33,20 @@ nav a {
   transition: background 0.3s;
 }
 
+/* Add pseudo class hover effect to the anchor tag element */
 nav a:hover {
   font-weight: bold;
   opacity: 50%;
   background: rgba(51, 48, 48, 0.5);
 }
 
+/* Define flexbox display for the headInfo section */
 .headInfo {
   display: flex;
   align-items: center;
 }
 
+/* There are three info divs inside the headInfo section, define the info div style */
 .info {
   margin: 0;
   display: flex;
@@ -50,16 +57,19 @@ nav a:hover {
   flex: 1;
 }
 
+/* Define profile picture size */
 .imgProfile {
   width: 30%;
 }
 
+/* Define h1 style */
 h1 {
   font-size: 40px;
   margin: 10px;
   transition: font-size 2s;
 }
 
+/* Add pseudo class hover effect to the h1 element */
 h1:hover {
   background: -webkit-linear-gradient(
     45deg,
@@ -74,14 +84,16 @@ h1:hover {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 60px;
+  font-size: 300%;
 }
 
-p {
+/* Define style for occupation section */
+.occupation {
   padding: 10px;
   font-size: 20px;
 }
 
+/* Define style for the display section, flexbox display */
 .display {
   display: flex;
   flex-direction: row;
@@ -89,6 +101,7 @@ p {
   background: rgb(236, 227, 227);
 }
 
+/* Define h2 style */
 h2 {
   padding-right: 20px;
   padding-bottom: 20px;
@@ -98,11 +111,13 @@ h2 {
   text-align: end;
 }
 
+/* Define the content section style inside the display section */
 .display section {
   flex: 3;
   border-left: 5px solid rgb(13, 4, 81);
 }
 
+/* Define style for the paragraph about self-description */
 .description {
   text-indent: 30px;
   line-height: 40px;
@@ -112,6 +127,7 @@ h2 {
   padding: 20px;
 }
 
+/* Define style for the projects section */
 .projects {
   border-left: 5px solid rgb(13, 4, 81);
   padding: 20px 0;
@@ -120,6 +136,7 @@ h2 {
   justify-content: center;
 }
 
+/* Define style for the first project and give it a background image*/
 .first {
   display: flex;
   width: 85%;
@@ -131,6 +148,7 @@ h2 {
   background-position: center;
 }
 
+/* Define style for all other projects that is not the first project */
 .card {
   width: 40%;
   height: 200px;
@@ -139,35 +157,41 @@ h2 {
   position: relative;
 }
 
+/* Give all projects secion a border */
 .first,
 .card {
   border: 5px solid rgb(67, 198, 198);
 }
 
+/* Give the first card project a background image */
 .one {
   background-image: url("../images/littleIslandNY.jpeg");
   background-size: cover;
   background-position-y: 35%;
 }
 
+/* Give the second card project a background image */
 .two {
   background-image: url("../images/alaska.jpeg");
   background-size: cover;
   background-position-y: 35%;
 }
 
+/* Give the third project a background image */
 .three {
   background-image: url("../images/davidSki.jpg");
   background-size: cover;
   background-position-y: 35%;
 }
 
+/* Give the fourth card project a background image */
 .four {
   background-image: url("../images/davidClimb.jpeg");
   background-size: cover;
   background-position-y: 35%;
 }
 
+/* Give the project section a hover opacity effect when you hover over the project image */
 .work {
   transition: opacity 0.5s;
 }
@@ -176,6 +200,7 @@ h2 {
   opacity: 50%;
 }
 
+/* Define styple for the projct description section  */
 .title {
   position: absolute;
   bottom: 20px;
@@ -198,6 +223,7 @@ h3 {
   color: rgb(34, 33, 33);
 }
 
+/* Add style to the contact section */
 .contacts {
   display: flex;
   justify-content: space-around;
@@ -215,6 +241,7 @@ h3 {
   transition: background 0.3s;
 }
 
+/* Add hover effect to display my phone number when you hover over the Phone in contact  */
 .phone:hover::after {
   position: absolute;
   bottom: -8px;
@@ -228,6 +255,7 @@ h3 {
   color: white;
 }
 
+/* Add style to the footer section */
 footer {
   margin-top: 40px;
   padding: 20px;
@@ -265,13 +293,29 @@ footer {
   font-size: 20px;
 }
 
-@media screen and (max-width: 1500px) {
-  .display {
-    flex: 4;
+/* Ajust website for ipad Air size */
+@media screen and (max-width: 820px) {
+  h1 {
+    font-size: 25px;
   }
-}
 
-@media screen and (max-width: 1000px) {
+  h1:hover {
+    background: -webkit-linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet,
+      red
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+  }
+
   .first {
     width: 100%;
     margin: 10px 35px;
@@ -281,5 +325,80 @@ footer {
   }
   .card {
     width: 100%;
+  }
+}
+
+/* Ajust website for iphone 12 pro size */
+@media screen and (max-width: 390px) {
+  li {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+
+  h1:hover {
+    background: -webkit-linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet,
+      red
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 15px;
+  }
+
+  .occupation {
+    font-size: 10px;
+  }
+
+  .link {
+    font-size: 10px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .description {
+    line-height: 15px;
+  }
+
+  .first {
+    width: 100%;
+    height: 200px;
+    margin: 10px 35px;
+  }
+
+  .display {
+    flex: 10;
+  }
+
+  .card {
+    width: 100%;
+    height: 100px;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  .title p {
+    font-size: 8px;
+  }
+
+  .title {
+    padding: 5px;
+  }
+
+  .contactLink {
+    font-size: 10px;
   }
 }
