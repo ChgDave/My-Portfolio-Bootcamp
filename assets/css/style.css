@@ -294,7 +294,7 @@ footer {
 }
 
 /* Ajust website for ipad pro size */
-@media screen and (max-width: 1024px) {
+@media screen and (max-device-width: 1024px) {
   h1 {
     font-size: 25px;
   }
@@ -333,7 +333,7 @@ footer {
 }
 
 /* Ajust website for iphone 12 pro size */
-@media screen and (max-width: 390px) {
+@media screen and (max-device-width: 390px) {
   li {
     font-size: 15px;
   }
