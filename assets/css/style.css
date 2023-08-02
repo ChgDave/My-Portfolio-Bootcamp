@@ -333,7 +333,7 @@ footer {
 }
 
 /* Ajust website for iphone 12 pro size */
-@media screen and (max-device-width: 390px) {
+@media screen and (max-device-width: 430px) {
   li {
     font-size: 15px;
   }
