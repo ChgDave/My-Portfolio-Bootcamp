@@ -3,10 +3,6 @@
 }
 
 body {
-  /* background-image: url("../images/davidGrandCanyon.jpg");
-  background-size: 100% 130%;
-  background-repeat: no-repeat;
-  opacity: 50%; */
   background-color: rgb(51, 48, 48);
 }
 
@@ -39,6 +35,11 @@ nav a:hover {
   background: rgba(51, 48, 48, 0.5);
 }
 
+.headInfo {
+  display: flex;
+  align-items: center;
+}
+
 .info {
   margin: 0;
   display: flex;
@@ -46,6 +47,11 @@ nav a:hover {
   align-items: center;
   flex-wrap: wrap;
   color: aliceblue;
+  flex: 1;
+}
+
+.imgProfile {
+  width: 30%;
 }
 
 h1 {
@@ -182,12 +188,14 @@ h2 {
 
 h3 {
   font-size: 20px;
+  color: rgb(34, 33, 33);
 }
 
 .title p {
   text-align: start;
   font-size: 15px;
   padding: 0px;
+  color: rgb(34, 33, 33);
 }
 
 .contacts {
@@ -223,7 +231,38 @@ h3 {
 footer {
   margin-top: 40px;
   padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nameFooter {
   color: white;
+  font-size: 20px;
+}
+
+.nameFooter:hover {
+  background: -webkit-linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon {
+  transition: font-size 0.3s;
+}
+
+.icon:hover {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -238,7 +277,7 @@ footer {
     margin: 10px 35px;
   }
   .display {
-    flex: 6;
+    flex: 8;
   }
   .card {
     width: 100%;
